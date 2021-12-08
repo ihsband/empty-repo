@@ -1,3 +1,5 @@
+import os
+os.system('''
 docker run -d \
   --name=webtop \
   --security-opt seccomp=unconfined `#optional` \
@@ -11,3 +13,4 @@ docker run -d \
   --shm-size="1gb" `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/webtop:ubuntu-mate
+''')
